@@ -34,6 +34,10 @@
 	        System.out.printf("%n%nLa media es %.2f y la mediana es %.2f.", 
 	                calcularMedia(), 
 	                calcularMediana());
+	        
+
+	        System.out.print("");
+	        maximo();
 	    }
 	     
 	    private static double calcularMediana(){
@@ -54,6 +58,23 @@
 	        }
 	        return (double)cont/numElementos;
 	    }
+	    
+	    public static void maximo() {
+	    	int mayor = numeros[0];
+	    	 
+	        for (int i = 1; i < numeros.length; i++) {
+	            if (numeros[i] > mayor) {
+	                mayor = numeros[i];
+	            }
+	        }
+	 
+	        System.out.println("El número mayor es el " + mayor);
+	 
+	    }
+	    
+	 
+			
+	    	
 	     
 	    private static void visualizar() {
 	        System.out.println();
