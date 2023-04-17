@@ -36,8 +36,9 @@
 	                calcularMediana());
 	        
 
-	        System.out.print("");
+	        System.out.println("        ");
 	        maximo();
+	        minimo();
 	    }
 	     
 	    private static double calcularMediana(){
@@ -69,6 +70,18 @@
 	        }
 	 
 	        System.out.println("El número mayor es el " + mayor);
+	 
+	    }
+	    public static void minimo() {
+	    	int menor = numeros[0];
+	    	 
+	        for (int i = 1; i < numeros.length; i++) {
+	            if (numeros[i] < menor) {
+	                menor = numeros[i];
+	            }
+	        }
+	 
+	        System.out.println("El número menor es el " + menor);
 	 
 	    }
 	    
