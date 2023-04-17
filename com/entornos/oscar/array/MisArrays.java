@@ -1,3 +1,4 @@
+package com.entornos.oscar.array;
 /**
  * 
  */
@@ -15,7 +16,7 @@
 	import java.util.Random;
 	import java.util.Scanner;
 	 
-	public abstract class Array {
+	public abstract class MisArrays {
 	     
 	    static int numeros[];
 	    static int numElementos;
@@ -32,7 +33,7 @@
 	        Arrays.sort(numeros);
 	        visualizar();
 	        System.out.printf("%n%nLa media es %.2f y la mediana es %.2f.", 
-	                calcularMedia(), 
+	                calcularMedia(numeros), 
 	                calcularMediana());
 	        
 
@@ -41,7 +42,7 @@
 	        minimo();
 	    }
 	     
-	    private static double calcularMediana(){
+	    public static double calcularMediana(){
 	        double mediana;
 	        if(numElementos % 2 == 0){
 	            int sumaMedios = numeros[numElementos/2] + numeros[numElementos/2 - 1]; 
@@ -52,7 +53,7 @@
 	        return mediana;
 	    }
 	     
-	    private static double calcularMedia(){
+	    public static double calcularMedia(int [] array){
 	        int cont = 0;
 	        for (int num : numeros) {
 	            cont += num;
@@ -60,7 +61,7 @@
 	        return (double)cont/numElementos;
 	    }
 	    
-	    public static void maximo() {
+	    public static int maximo() {
 	    	int mayor = numeros[0];
 	    	 
 	        for (int i = 1; i < numeros.length; i++) {
@@ -69,10 +70,10 @@
 	            }
 	        }
 	 
-	        System.out.println("El número mayor es el " + mayor);
+	        return mayor;
 	 
 	    }
-	    public static void minimo() {
+	    public static int minimo() {
 	    	int menor = numeros[0];
 	    	 
 	        for (int i = 1; i < numeros.length; i++) {
@@ -81,7 +82,7 @@
 	            }
 	        }
 	 
-	        System.out.println("El número menor es el " + menor);
+	        return menor;
 	 
 	    }
 	    
